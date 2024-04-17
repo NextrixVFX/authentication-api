@@ -1,0 +1,41 @@
+### get keys
+
+POST http://localhost:85/keys/k4rb1ne
+Content-Type: application/json
+
+{
+    "accessKey": "urkey"
+}
+
+
+### create
+
+POST http://localhost:85/create/k4rb1ne
+Content-Type: application/json
+
+{
+    "discordid": "2",
+    "authKey": "2",
+    "duration": "5",
+    "accessKey": "urkey"
+}
+
+### verify
+
+POST http://localhost:85/verify/k4rb1ne
+Content-Type: application/json
+
+{
+    "discordid": "1088919697807904780",
+    "authKey": "c235c4053356c793ba75b251b2830544db49a252d6876d9ec2bc826c0e32d455"
+}
+
+### delete
+
+POST http://localhost:85/kill/k4rb1ne
+Content-Type: application/json
+
+{
+    "discordid": "1",
+    "accessKey": "urkey"
+}
