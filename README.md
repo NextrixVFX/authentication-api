@@ -8,3 +8,5 @@
 - Encryption
 - Key Generation Auth
 - Timed Auth Keys
+# TODO
+- WebUI Built with Go/React.js
