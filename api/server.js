@@ -92,14 +92,14 @@ app.post(getAuthsUrl, (req, res) => {
 	if (req.body.accessKey == AccessKey) {
 		res.send(getAllUsers());
 	} else {
-		return res.status(500).send("Erm, you dont have any privilege sir. Try being white... (because that makes sense)");
+		return res.status(500).send("No Permission");
 	}
 });
 
 
 // Create Key
 app.get(createAuthUrl, (req, res) => { 
-    res.send("you thought nigga");
+    res.send("L");
 });
 
 app.post(createAuthUrl, async (req, res) => {
@@ -122,7 +122,7 @@ app.post(createAuthUrl, async (req, res) => {
                 res.status(201).send(`${user.authKey}`);
                 //res.status(201).send(`Created a user with Discord ID ${req.body.discordid}`);
             } else {
-                return res.status(500).send("Sir, where's your trump card?");
+                return res.status(500).send("No Permission");
             }
         } else {
             res.send("User already exists pooron.");
@@ -135,7 +135,7 @@ app.post(createAuthUrl, async (req, res) => {
 
 // Delete Key
 app.get(delAuthUrl, (req, res) => { 
-    res.send("YOU ARE LIKE SPED NIGGA LMFAOOOO");
+    res.send("bozo");
 });
 
 // Delete Key
@@ -146,9 +146,9 @@ app.post(delAuthUrl, async (req, res) => {
     } else {
         if (req.body.accessKey == AccessKey) { // prevent random people from deleting keys
             removeUser(req.body.discordid);
-            return res.status(201).send(`commited a "george floyd" against user ${req.body.discordid}`);
+            return res.status(201).send(`killed ${req.body.discordid}`);
         } else {
-            return res.status(500).send("you ain gyatt dat white privilege my boi");
+            return res.status(500).send("No Permission");
         }
     }
 });
